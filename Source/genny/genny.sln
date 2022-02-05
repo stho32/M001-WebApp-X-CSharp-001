@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.BL.Tests", "genny.BL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.Infrastructure", "genny.Infrastructure\genny.Infrastructure.csproj", "{BA09DF15-4081-4F8D-AE5E-DDE649B530DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.Blazor", "genny.Blazor\genny.Blazor.csproj", "{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{BA09DF15-4081-4F8D-AE5E-DDE649B530DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA09DF15-4081-4F8D-AE5E-DDE649B530DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA09DF15-4081-4F8D-AE5E-DDE649B530DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
