@@ -1,19 +1,15 @@
 @page "/codegenerator"
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Code Generator for Data Access</PageTitle>
 
-<h1>Counter</h1>
+<h1>Code Generator for Data Access Code</h1>
 
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
+<select id="connections" @bind="SelectedConnection">
+    @foreach (var item in _viewModel?.AvailableConnections!)
     {
-        currentCount++;
+        <option value="@item.ConnectionStringName">@item.ConnectionStringName</option>
     }
+</select>
 
-}
+<p id="selectedConnection">@SelectedConnection</p>
+
