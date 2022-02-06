@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd Source/spamfilter
-dotnet run --project spamfilter.console/
+cd Source/genny
+dotnet run --project genny.console/
 cd ..
 cd ..
 
