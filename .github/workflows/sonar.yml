@@ -48,7 +48,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"stho32_P021-Console-Linux-CSharp-001" /o:"stho32" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build Source/spamfilter/spamfilter.sln
-          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:AltCover=true Source/spamfilter/spamfilter.sln
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"stho32_M001-WebApp-X-CSharp-001" /o:"stho32" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build Source/genny/genny.sln
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:AltCover=true Source/genny/genny.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
