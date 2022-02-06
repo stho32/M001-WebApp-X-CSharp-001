@@ -35,7 +35,8 @@ public partial class CodeGenerator
         
         _viewModel = new CodeGeneratorViewModel(
             connections.FirstOrDefault()?.ConnectionStringName, 
-            connections.ToViewModels());
+            connections,
+            RepositoryFactory.DatabaseObjectRepository);
         
         base.OnInitialized();
     }

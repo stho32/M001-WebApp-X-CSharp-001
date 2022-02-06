@@ -11,7 +11,7 @@ public class TestDataConnectionDescriptionRepository : IConnectionDescriptionRep
         var result = new List<IConnectionDescription>();
 
         result.Add(new ConnectionDescription("Anwendung1", "a-connection-string"));
-        result.Add(new ConnectionDescription("Anwendung2", "another-connection-string"));
+        result.Add(new ConnectionDescription("Anwendung2", "Anwendung2Connection"));
         result.Add(new ConnectionDescription("Anwendung3", "another-connection-string"));
 
         return result.ToArray();

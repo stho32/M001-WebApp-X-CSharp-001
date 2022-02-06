@@ -9,7 +9,8 @@ public class RepositoryFactoryTests
     public void gives_us_access_to_the_repositories_we_passed_at_the_beginning()
     {
         var factory = new RepositoryFactory(
-            new TestDataConnectionDescriptionRepository());
+            new TestDataConnectionDescriptionRepository(),
+            new TestDataDatabaseObjectRepository());
         
         Assert.IsType<TestDataConnectionDescriptionRepository>(factory.ConnectionDescriptionRepository);
     }
