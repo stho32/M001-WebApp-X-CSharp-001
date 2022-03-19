@@ -12,8 +12,22 @@ public class TestDataDatabaseObjectRepository : IDatabaseObjectRepository
         {
             var result = new List<IDatabaseObject>();
 
-            result.Add(new DatabaseObject("dbo", "Table", Array.Empty<IDatabaseColumn>()));
-            result.Add(new DatabaseObject("dbo", "View", Array.Empty<IDatabaseColumn>()));
+            result.Add(new DatabaseObject("dbo", "Contact", 
+                new []
+                {
+                    new DatabaseColumn("Id", "int", 0, 0, 0, true),
+                    new DatabaseColumn("Salutation", "varchar", 200, 0, 0, false),
+                    new DatabaseColumn("Firstname", "varchar", 200, 0, 0, false),
+                    new DatabaseColumn("Surname", "varchar", 200, 0, 0, false)
+                }));
+
+            result.Add(new DatabaseObject("dbo", "ContactStatistics", new[]
+            {
+                new DatabaseColumn("Id", "int", 0, 0, 0, true),
+                new DatabaseColumn("Salutation", "varchar", 200, 0, 0, false),
+                new DatabaseColumn("Firstname", "varchar", 200, 0, 0, false),
+                new DatabaseColumn("Surname", "varchar", 200, 0, 0, false)
+            }));
 
             return result.ToArray();
         }

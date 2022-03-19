@@ -1,9 +1,8 @@
-using genny.BL;
-using genny.BL.ExtensionMethods;
+using genny.BL.CodeGeneration;
+using genny.BL.TypeConversion;
 using genny.BL.ViewModels;
-using genny.Interfaces;
+using genny.Interfaces.CodeGeneration;
 using genny.Interfaces.Repositories;
-using genny.Interfaces.ViewModels;
 using Microsoft.AspNetCore.Components;
 
 namespace genny.Blazor.Pages;
@@ -43,11 +42,18 @@ public partial class CodeGenerator
             throw new NullReferenceException(nameof(RepositoryFactory));
         
         var connections = RepositoryFactory.ConnectionDescriptionRepository.GetList();
+
+        var generatorCollection = new List<ICodeGenerator>();
+        
+        generatorCollection.Add(new EntityInterfaceCodeGenerator(
+            new CSharpFromSqlTypeConverterCollection()
+            ));
         
         _viewModel = new CodeGeneratorViewModel(
             connections.FirstOrDefault()?.ConnectionStringName, 
             connections,
-            RepositoryFactory.DatabaseObjectRepository);
+            RepositoryFactory.DatabaseObjectRepository,
+            generatorCollection.ToArray());
         
         base.OnInitialized();
     }

@@ -1,5 +1,4 @@
 using genny.BL.Entities;
-using genny.BL.ExtensionMethods;
 using genny.BL.Repositories;
 using genny.BL.Tests.Mocks;
 using genny.BL.ViewModels;
@@ -27,7 +26,8 @@ public class CodeGeneratorViewModelTests
         var codegen = new CodeGeneratorViewModel(
             "",
             factory.ConnectionDescriptionRepository.GetList(),
-            factory.DatabaseObjectRepository
+            factory.DatabaseObjectRepository,
+            null
         );
         
         Assert.Empty(codegen.DatabaseObjects);
@@ -41,7 +41,8 @@ public class CodeGeneratorViewModelTests
         var codegen = new CodeGeneratorViewModel(
             "Test01",
             factory.ConnectionDescriptionRepository.GetList(),
-            factory.DatabaseObjectRepository
+            factory.DatabaseObjectRepository,
+            null
         );
         
         Assert.Equal("Test01", codegen.SelectedConnection);
@@ -55,7 +56,8 @@ public class CodeGeneratorViewModelTests
         var codegen = new CodeGeneratorViewModel(
             "Test01",
             factory.ConnectionDescriptionRepository.GetList(),
-            factory.DatabaseObjectRepository
+            factory.DatabaseObjectRepository,
+            null
         );
         
         Assert.NotEmpty(codegen.DatabaseObjects);
@@ -73,7 +75,8 @@ public class CodeGeneratorViewModelTests
                 new ConnectionDescription("Alpha", "AlphaConnection"),
                 new ConnectionDescription("Beta", "BetaConnection"),
             },
-            factory.DatabaseObjectRepository
+            factory.DatabaseObjectRepository,
+            null
         );
         
         Assert.Equal("Alpha", codegen.AvailableConnections[0].ConnectionStringName);

@@ -2,7 +2,7 @@ using System.Text;
 using genny.Interfaces.CodeGeneration;
 using genny.Interfaces.Entities;
 
-namespace genny.BL.Tests.CodeGeneration;
+namespace genny.BL.CodeGeneration;
 
 public class EntityInterfaceCodeGenerator : CodeGeneratorBase
 {

@@ -1,5 +1,4 @@
 using genny.BL.ViewModels;
-using genny.Interfaces;
 using genny.Interfaces.Entities;
 using genny.Interfaces.ViewModels;
 
