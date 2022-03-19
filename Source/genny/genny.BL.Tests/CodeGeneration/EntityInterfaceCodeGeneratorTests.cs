@@ -28,4 +28,22 @@ public interface IContact
 ".Trim(), code);
     }
 
+    [Fact]
+    public void When_there_is_a_column_defined_it_pops_up_as_a_property()
+    {
+        var generator = getGenerator();
+
+        var column = new DatabaseColumn("SomeColumn", "varchar", 200, 0, 0, false);
+        var dbobject = new DatabaseObject("dbo", "Contact", new IDatabaseColumn[] {column});
+
+        var code = generator.GetCode(dbobject);
+
+        Assert.Equal(@"
+public interface IContact
+{
+    string SomeColumn { get; }
+}
+".Trim(), code);
+    }
+
 }
