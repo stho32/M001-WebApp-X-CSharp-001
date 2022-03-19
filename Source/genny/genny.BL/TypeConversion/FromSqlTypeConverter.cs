@@ -2,12 +2,12 @@ using genny.Interfaces.CodeGeneration;
 
 namespace genny.BL.TypeConversion;
 
-public class FromSqlFromSqlTypeConverter : IFromSqlTypeConverter
+public class FromSqlTypeConverter : IFromSqlTypeConverter
 {
     private readonly string _sourceTypeName;
     private readonly string _targetTypeName;
 
-    public FromSqlFromSqlTypeConverter(
+    public FromSqlTypeConverter(
         string sourceTypeName,
         string targetTypeName
     )
