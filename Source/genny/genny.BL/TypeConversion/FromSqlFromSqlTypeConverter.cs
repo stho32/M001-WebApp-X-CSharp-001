@@ -1,6 +1,6 @@
 using genny.Interfaces.CodeGeneration;
 
-namespace genny.BL.Tests.CodeGeneration;
+namespace genny.BL.TypeConversion;
 
 public class FromSqlFromSqlTypeConverter : IFromSqlTypeConverter
 {

@@ -1,6 +1,7 @@
+using genny.BL.TypeConversion;
 using Xunit;
 
-namespace genny.BL.Tests.CodeGeneration;
+namespace genny.BL.Tests.TypeConversion;
 
 public class FromSqlFromSqlTypeConverterTests 
 {

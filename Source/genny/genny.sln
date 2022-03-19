@@ -1,25 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.Interfaces", "genny.Interfaces\genny.Interfaces.csproj", "{5D9723C9-A0A4-4104-BF69-C2D93E891FA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "genny.Interfaces", "genny.Interfaces\genny.Interfaces.csproj", "{5D9723C9-A0A4-4104-BF69-C2D93E891FA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.BL", "genny.BL\genny.BL.csproj", "{B5134322-8C10-47DD-8A75-09387C780E8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "genny.BL", "genny.BL\genny.BL.csproj", "{B5134322-8C10-47DD-8A75-09387C780E8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.BL.Tests", "genny.BL.Tests\genny.BL.Tests.csproj", "{3E996FBB-740A-4A7E-8F53-5BE9209C8058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "genny.BL.Tests", "genny.BL.Tests\genny.BL.Tests.csproj", "{3E996FBB-740A-4A7E-8F53-5BE9209C8058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.Infrastructure", "genny.Infrastructure\genny.Infrastructure.csproj", "{BA09DF15-4081-4F8D-AE5E-DDE649B530DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "genny.Infrastructure", "genny.Infrastructure\genny.Infrastructure.csproj", "{BA09DF15-4081-4F8D-AE5E-DDE649B530DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "genny.Blazor", "genny.Blazor\genny.Blazor.csproj", "{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "genny.Blazor", "genny.Blazor\genny.Blazor.csproj", "{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5D9723C9-A0A4-4104-BF69-C2D93E891FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +39,11 @@ Global
 		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC2CA53-BCC8-4C70-A8A5-108F3112AF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C82BAC23-65AA-4AEE-B664-42BD7FCE7A46}
 	EndGlobalSection
 EndGlobal
