@@ -11,5 +11,18 @@
     }
 </select>
 
-<p id="selectedConnection">@SelectedConnection</p>
-
+<div id="databaseObjects">
+    @if (_viewModel.DatabaseObjects.Length == 0)
+    {
+        <p>No items found</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var item in _viewModel.DatabaseObjects)
+            {
+                <li>@(item.Schema + "." + item.Name)</li>
+            }
+        </ul>
+    }
+</div>

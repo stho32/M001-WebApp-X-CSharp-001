@@ -11,3 +11,4 @@ public class ConnectionViewModel : IConnectionViewModel
         ConnectionStringName = connectionStringName;
     }
 }
+
