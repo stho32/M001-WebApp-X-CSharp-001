@@ -1,4 +1,5 @@
 using genny.BL.Entities;
+using genny.BL.TypeConversion;
 using genny.Interfaces.CodeGeneration;
 using genny.Interfaces.Entities;
 using Xunit;
@@ -9,7 +10,8 @@ public class EntityInterfaceCodeGeneratorTests
 {
     private ICodeGenerator getGenerator()
     {
-        return new EntityInterfaceCodeGenerator();
+        return new EntityInterfaceCodeGenerator(
+            new CSharpFromSqlTypeConverterCollection());
     }
 
     [Fact]
