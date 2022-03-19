@@ -7,6 +7,7 @@ public class DatabaseObject : IDatabaseObject
     public string Schema { get; }
     public string Name { get; }
     public IDatabaseColumn[] Columns { get; }
+    public string Fullname => Schema + "." + Name;
 
     public DatabaseObject(string schema, string name, IDatabaseColumn[] columns)
     {

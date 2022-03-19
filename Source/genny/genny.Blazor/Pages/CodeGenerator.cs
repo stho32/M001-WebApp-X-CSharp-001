@@ -24,6 +24,17 @@ public partial class CodeGenerator
         }
     }
 
+    [Parameter]
+    public string? SelectedObject
+    {
+        get => _viewModel?.SelectedObject;
+        set
+        {
+            if (_viewModel != null)
+                _viewModel.SelectedObject = value;
+        }
+    }
+
     private CodeGeneratorViewModel? _viewModel;
     
     protected override void OnInitialized()

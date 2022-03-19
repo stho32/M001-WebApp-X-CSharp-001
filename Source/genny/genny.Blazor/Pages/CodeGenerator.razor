@@ -4,25 +4,34 @@
 
 <h1>Code Generator for Data Access Code</h1>
 
-<select id="connections" @bind="SelectedConnection">
-    @foreach (var item in _viewModel?.AvailableConnections!)
-    {
-        <option value="@item.ConnectionStringName">@item.ConnectionStringName</option>
-    }
-</select>
+<div class="generator">
+	
+	<div class="generator__objectSelection">
+		<select id="connections" @bind="SelectedConnection">
+			@foreach (var item in _viewModel?.AvailableConnections!)
+			{
+				<option value="@item.ConnectionStringName">@item.ConnectionStringName</option>
+			}
+		</select>
+		<br>
 
-<div id="databaseObjects">
-    @if (_viewModel.DatabaseObjects.Length == 0)
-    {
-        <p>No items found</p>
-    }
-    else
-    {
-        <ul>
-            @foreach (var item in _viewModel.DatabaseObjects)
-            {
-                <li>@(item.Schema + "." + item.Name)</li>
-            }
-        </ul>
-    }
+		@if (_viewModel.DatabaseObjects.Length == 0)
+		{
+			<p>No items found</p>
+		}
+		else
+		{
+			<select id="databaseObjects" @bind="SelectedObject">
+				@foreach (var item in _viewModel.DatabaseObjects)
+				{
+					<option value="@item.Fullname">@(item.Fullname)</option>
+				}
+			</select>
+		}
+	</div>
+
+	<div class="generator__codeSection">
+		<textarea class="codeeditor" @bind="_viewModel.GeneratedCode"></textarea>
+	</div>
+
 </div>

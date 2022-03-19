@@ -1,3 +1,4 @@
+using System.CodeDom.Compiler;
 using genny.BL.ExtensionMethods;
 using genny.Interfaces.Entities;
 using genny.Interfaces.Repositories;
@@ -20,6 +21,30 @@ public class CodeGeneratorViewModel : ICodeGeneratorViewModel
         } 
     }
 
+    private string? _selectedObject;
+
+    public string? SelectedObject
+    {
+        get => _selectedObject;
+        set
+        {
+            _selectedObject = value;
+            LoadGeneratedCode(_selectedObject);
+        }
+    }
+
+    private void LoadGeneratedCode(string? selectedObject)
+    {
+        if (string.IsNullOrWhiteSpace(selectedObject))
+        {
+            return;
+        }
+
+        GeneratedCode = "I am the Code for " + selectedObject;
+    }
+
+    public string GeneratedCode { get; set; }
+
     private void LoadDatabaseObjects(string? selectedConnection)
     {
         DatabaseObjects = Array.Empty<IDatabaseObject>();
@@ -38,7 +63,7 @@ public class CodeGeneratorViewModel : ICodeGeneratorViewModel
     }
 
     public IConnectionViewModel[] AvailableConnections { get; }
-    public IDatabaseObject[] DatabaseObjects { get; private set; } = Array.Empty<IDatabaseObject>(); 
+    public IDatabaseObject[] DatabaseObjects { get; private set; } = Array.Empty<IDatabaseObject>();
 
     public CodeGeneratorViewModel(
         string? selectedConnection, 

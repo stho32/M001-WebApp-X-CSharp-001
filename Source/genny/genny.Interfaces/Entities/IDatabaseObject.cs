@@ -6,4 +6,6 @@ public interface IDatabaseObject
     string Name { get; }
     
     IDatabaseColumn[] Columns { get; }
+
+    string Fullname { get; }
 }
